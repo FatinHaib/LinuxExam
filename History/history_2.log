@@ -1,0 +1,12 @@
+   11  git add --all && git commit -m "Question 01"
+   12  git push
+   13  git checkout -b BR_Q2
+   14  echo "Ubuntu Version: $(lsb_release -d | cut -f2)" > Outputs/Q2/out_2.txt
+   15  echo "Python Packages:" >> Outputs/Q2/out_2.txt && pip3 list >> Outputs/Q2/out_2.txt
+   16  echo "Git Version: $(git --version)" >> Outputs/Q2/out_2.txt
+   17  echo "Java Version: $(java -version 2>&1 | head -n 1)" >> Outputs/Q2/out_2.txt
+   18  curl -L -o Outputs/Q2/page1.html https://example.com
+   19  curl -L -o Outputs/Q2/page2.html https://example.com
+   20  sed -i '4s/Example Domain/Page 01/;40s/Example Domain/Page 01/' Outputs/Q2/page1.html
+   21  sed -i '4s/Example Domain/Page 02/;40s/Example Domain/Page 02/' Outputs/Q2/page2.html
+   22  history > History/history_2.log
