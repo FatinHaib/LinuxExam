@@ -1,0 +1,12 @@
+   12  git init .
+   13  mkdir -p History Resources/Images Resources/Data Resources/Downloads Code/Python Code/Java Code/NodeJS Outputs/Q{1..4}
+   14  curl -L -o Resources/Downloads/f1.tar.gz https://github.com/Telhai-Git/Exam/archive/refs/tags/f1.tar.gz
+   15  tar -C Resources/Downloads -xf Resources/Downloads/f1.tar.gz
+   16  find . \( -name "*.java" -o -name "*.py" \) -exec cp {} Resources/Downloads/ \;
+   17  find . \( -name "*.txt" -o -name "*.log" -o -name "*.csv" \) -exec cp {} Resources/Data/ \;
+   18  mkdir "Resources/Downloads/download_$(date +"%d-%m-%Y")"
+   19  (cd Resources/Downloads && mv Exam-* download_$(date +%d-%m-%Y)/)
+   20  rm Resources/Downloads/f1.tar.gz
+   21  ls -R > Outputs/Q1/out_1.log
+   22  cat ~/.bash_history > History/history_1.log
+   23  history > History/history_1.log
